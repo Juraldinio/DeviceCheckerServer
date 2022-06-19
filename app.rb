@@ -1,6 +1,3 @@
-require 'sinatra'
-require 'sinatra/json'
-
 unless ENV['RACK_ENV'] == 'production'
   require 'dotenv'
   Dotenv.load
@@ -9,6 +6,9 @@ require 'openssl'
 require 'http'
 require 'jwt'
 require 'securerandom'
+
+require 'sinatra'
+require 'sinatra/json'
 
 configure do
   # change to https://api.devicecheck.apple.com for production app, ie. App in App Store / Testflight
